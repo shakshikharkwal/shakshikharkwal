@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        h2 {
+            font-size: 80px;
+
+        }
+
+        #ludo {
+            margin-top: 50px;
+
+            border: 10px solid white;
+            height: 1000px;
+            width: 1000px;
+            margin-left: 120px;
+
+        }
+
+        .red {
+            background-color: red;
+            height: 330px;
+            width: 330px;
+            border: 30px solid red;
+            float: left;
+            border-radius: 100px;
+        }
+
+        .green {
+            background-color: green;
+            height: 330px;
+            width: 330px;
+            border: 30px solid green;
+            float: left;
+            border-radius: 100px;
+        }
+
+        .green_house {
+            height: 380px;
+            width: 210px;
+            border: 5px solid #1b1a1a;
+            float: left;
+        }
+
+        .green_block {
+            height: 60px;
+            width: 66px;
+            border: 2px groove #1b1a1a;
+            float: left;
+            display: table-cell;
+            vertical-align: bottom;
+        }
+
+        .red_house {
+            width: 379px;
+            height: 210px;
+            border: 5px solid #1b1a1a;
+            float: left;
+        }
+
+        .red_block {
+            width: 59.1px;
+            height: 66px;
+            border: 2px groove #1b1a1a;
+            float: left;
+            display: table-cell;
+            vertical-align: bottom;
+        }
+
+        .victory {
+            width: 2px;
+            height: 2px;
+
+            float: left;
+
+
+            display: table-cell;
+            border-left: 110px solid red;
+            border-right: 110px solid yellow;
+            border-top: 110px solid green;
+            border-bottom: 110px solid blue;
+        }
+
+
+        .yellow_house {
+            width: 379px;
+            height: 210px;
+            border: 5px solid #1b1a1a;
+            float: left;
+        }
+
+        .yellow_block {
+            width: 59.1px;
+            height: 66px;
+            border: 2px groove #1b1a1a;
+            float: left;
+            display: table-cell;
+            vertical-align: bottom;
+        }
+
+        .blue {
+            background-color: blue;
+
+            height: 330px;
+            width: 330px;
+            border: 30px solid blue;
+            float: left;
+            border-radius: 100px;
+        }
+
+        .blue_house {
+            height: 380px;
+            width: 210px;
+            border: 5px solid #1b1a1a;
+            float: left;
+        }
+
+        .blue_block {
+            height: 60px;
+            width: 66px;
+            border: 2px groove #1b1a1a;
+            float: left;
+            display: table-cell;
+            vertical-align: bottom;
+        }
+
+        .yellow {
+            background-color: yellow;
+
+            height: 330px;
+            width: 330px;
+            border: 30px solid yellow;
+            float: left;
+            border-radius: 100px;
+        }
+
+        .block1 {
+            background-color: green;
+        }
+
+        .block2 {
+            background-color: red;
+        }
+
+        .block3 {
+            background-color: yellow;
+        }
+
+        .block4 {
+            background-color: blue;
+        }
+
+        .coin_red {
+            height: 200px;
+            width: 200px;
+            border: 10px solid white;
+            background-color: white;
+            margin: 50px;
+            float: left;
+            z-index: 2;
+        }
+
+        .coin_red1 {
+            height: 55px;
+            width: 55px;
+            background-color: red;
+            border: 1px solid white;
+            border-radius: 30px;
+            float: left;
+            margin: 20px;
+        }
+
+        .coin_green {
+            height: 200px;
+            width: 200px;
+            border: 10px solid white;
+            background-color: white;
+            margin: 50px;
+            float: left;
+            z-index: 2;
+        }
+
+        .coin_green1 {
+            height: 55px;
+            width: 55px;
+            background-color: green;
+            border: 1px solid white;
+            border-radius: 30px;
+            float: left;
+            margin: 20px;
+        }
+
+        .coin_blue {
+            height: 200px;
+            width: 200px;
+            border: 10px solid white;
+            background-color: white;
+            margin: 50px;
+            float: left;
+            z-index: 2;
+        }
+
+        .coin_blue1 {
+            height: 55px;
+            width: 55px;
+            background-color: blue;
+            border: 1px solid white;
+            border-radius: 30px;
+            float: left;
+            margin: 20px;
+        }
+
+        .coin_yellow {
+            height: 200px;
+            width: 200px;
+            border: 10px solid white;
+            background-color: white;
+            margin: 50px;
+            float: left;
+            z-index: 2;
+        }
+
+        .coin_yellow1 {
+            height: 55px;
+            width: 55px;
+            background-color: yellow;
+            border: 1px solid white;
+            border-radius: 30px;
+            float: left;
+            margin: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <h2 align="center"> LUDO</h2>
+    <div id="ludo">
+        <div class="red">
+            <div class="coin_red">
+                <div class="coin_red1"></div>
+                <div class="coin_red1"></div>
+                <div class="coin_red1"></div>
+                <div class="coin_red1"></div>
+            </div>
+
+        </div>
+        <div class="green_house">
+            <div class="green_block">
+            </div>
+            <div class="green_block">
+            </div>
+            <div class="green_block">
+            </div>
+            <div class="green_block ">
+            </div>
+            <div class="green_block block1">
+            </div>
+            <div class="green_block block1">
+            </div>
+            <div class="green_block block2">
+            </div>
+            <div class="green_block block1">
+            </div>
+            <div class="green_block">
+            </div>
+            <div class="green_block">
+            </div>
+            <div class="green_block block1">
+            </div>
+            <div class="green_block">
+            </div>
+            <div class="green_block">
+            </div>
+            <div class="green_block block1">
+            </div>
+            <div class="green_block">
+            </div>
+            <div class="green_block">
+            </div>
+            <div class="green_block block1">
+            </div>
+            <div class="green_block">
+            </div>
+
+        </div>
+
+        <div class="green">
+            <div class="coin_green">
+                <div class="coin_green1"></div>
+                <div class="coin_green1"></div>
+                <div class="coin_green1"></div>
+                <div class="coin_green1"></div>
+            </div>
+
+        </div>
+        <div class="red_house">
+            <div class="red_block "></div>
+            <div class="red_block block2"></div>
+            <div class="red_block"></div>
+            <div class="red_block "></div>
+            <div class="red_block "></div>
+            <div class="red_block "></div>
+            <div class="red_block"></div>
+            <div class="red_block block2"></div>
+            <div class="red_block block2"></div>
+            <div class="red_block block2"></div>
+            <div class="red_block block2"></div>
+            <div class="red_block block2"></div>
+            <div class="red_block"></div>
+            <div class="red_block"></div>
+            <div class="red_block block4"></div>
+            <div class="red_block"></div>
+            <div class="red_block"></div>
+            <div class="red_block"></div>
+
+        </div>
+        <div class="victory">
+
+        </div>
+        <div class="yellow_house">
+            <div class="yellow_block "></div>
+            <div class="yellow_block"></div>
+            <div class="yellow_block"></div>
+            <div class="yellow_block block1"></div>
+            <div class="yellow_block "></div>
+            <div class="yellow_block "></div>
+            <div class="yellow_block block3"></div>
+            <div class="yellow_block block3"></div>
+            <div class="yellow_block block3"></div>
+            <div class="yellow_block block3"></div>
+            <div class="yellow_block  block3"></div>
+            <div class="yellow_block"></div>
+            <div class="yellow_block"></div>
+            <div class="yellow_block  "></div>
+            <div class="yellow_block"></div>
+            <div class="yellow_block"></div>
+            <div class="yellow_block block3"></div>
+            <div class="yellow_block"></div>
+
+        </div>
+        <div class="blue">
+            <div class="coin_blue">
+                <div class="coin_blue1"></div>
+                <div class="coin_blue1"></div>
+                <div class="coin_blue1"></div>
+                <div class="coin_blue1"></div>
+            </div>
+        </div>
+        <div class="blue_house">
+            <div class="blue_block">
+            </div>
+            <div class="blue_block block4">
+            </div>
+            <div class="blue_block">
+            </div>
+            <div class="blue_block">
+            </div>
+            <div class="blue_block block4">
+            </div>
+            <div class="blue_block">
+            </div>
+            <div class="blue_block ">
+            </div>
+            <div class="blue_block block4">
+            </div>
+            <div class="blue_block ">
+            </div>
+            <div class="blue_block ">
+            </div>
+            <div class="blue_block block4">
+            </div>
+            <div class="blue_block block3">
+            </div>
+            <div class="blue_block block4">
+            </div>
+            <div class="blue_block block4">
+            </div>
+            <div class="blue_block">
+            </div>
+            <div class="blue_block">
+            </div>
+            <div class="blue_block">
+            </div>
+            <div class="blue_block">
+            </div>
+        </div>
+        <div class="yellow">
+
+            <div class="coin_yellow">
+                <div class="coin_yellow1"></div>
+                <div class="coin_yellow1"></div>
+                <div class="coin_yellow1"></div>
+                <div class="coin_yellow1"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
